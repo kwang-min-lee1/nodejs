@@ -10,8 +10,10 @@ const taskSchema = Schema({
     isComplete:{
         type:Boolean,
         required:true
-    }
-})
+    },
+},
+{timestamps:true}
+);
 
 // Task 라는 모델 만들기
 const Task = mongoose.model("Task", taskSchema);
