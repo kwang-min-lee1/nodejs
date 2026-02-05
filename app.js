@@ -22,6 +22,11 @@ mongoose.connect(mongoURI).then(()=> {
     console.log("DB connection fail", err);
 });
 
-app.listen(5000, () =>{
-    console.log("sever on 5000");
-});
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`server on ${PORT}`));
+
+
+// app.listen(5000, () =>{
+//     console.log("sever on 5000");
+// });
